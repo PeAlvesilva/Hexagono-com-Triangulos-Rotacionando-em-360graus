@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.hexagon {
+    width: 200px;
+    height: 174px; /* Ajuste de altura total */
+    position: relative;
+    animation: rotateHexagon 4s linear infinite; /* Animação de rotação */
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+}
+
+.triangle.top-left {
+    border-width: 0 50px 87px 50px;
+    border-color: transparent transparent #007bff transparent;
+    top: 0;
+    left: 0;
+}
+
+.triangle.top-right {
+    border-width: 0 50px 87px 50px;
+    border-color: transparent transparent #5eff00 transparent;
+    top: 0;
+    left: 100px;
+}
+
+.triangle.middle {
+    border-width: 87px 50px 0 50px;
+    border-color: #ff5100 transparent transparent transparent;
+    top: 0.9px;
+    left: 50px;
+}
+
+.triangle.middle-left {
+    border-width: 87px 50px 0 50px;
+    border-color: #fbff00 transparent transparent transparent;
+    top: 87px;
+    left: 0;
+}
+
+.triangle.middle-right {
+    border-width: 87px 50px 0 50px;
+    border-color: #ff0000 transparent transparent transparent;
+    top: 87px;
+    left: 100px;
+}
+
+.triangle.bottom-left {
+    border-width: 0 50px 87px 50px;
+    border-color: transparent transparent #ff00c8 transparent;
+    top: 87px;
+    left: 50px;
+}
+
+/* Animação de rotação */
+@keyframes rotateHexagon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
